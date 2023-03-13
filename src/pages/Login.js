@@ -36,7 +36,7 @@ import {
 import { SpinnerForLogin } from "../components/Miscellaneous/SpinnerForLogin";
 import Swal from "sweetalert2";
 import AlertOnLogin from "../components/Alerts/AlertOnLogin";
-import useLogin from "../components/Login/useLogin";
+
 import { Spinner } from "../components/Miscellaneous/Spinner";
 import { setPartnerId } from "../redux/PartnerId";
 
