@@ -1,15 +1,30 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import SimpleReactLightbox from "simple-react-lightbox";
+import { Provider } from "react-redux";
+import Store from "./redux/Storee";
+import App from "./App";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
+import { QueryClientProvider } from "react-query";
+import { QueryClient } from "react-query";
+import swal from "sweetalert";
 
-const container = document.getElementById('root');
-const root = createRoot(container!);
-root.render(
+require("dotenv").config();
+
+const queryClient = new QueryClient();
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Provider store={Store}>
+      <QueryClientProvider client={queryClient}>
+        <SimpleReactLightbox>
+          <App />
+        </SimpleReactLightbox>
+      </QueryClientProvider>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

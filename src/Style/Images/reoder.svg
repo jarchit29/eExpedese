@@ -1,0 +1,27 @@
+<svg id="Filled" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="icon_navigation_arrow_drop_up_24px" data-name="icon/navigation/arrow_drop_up_24px" d="M0,4,4,0,8,4Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect id="Box" width="24" height="24" fill="none"/>
+  <path id="Icon_Menu" data-name="Icon / Menu" d="M99-1402h14v-1.667H99Zm0-4.167h14v-1.667H99ZM99-1412v1.667h14V-1412Z" transform="translate(-94 1419)" fill="#0276c0"/>
+  <g id="icon_navigation_arrow_drop_up_24px-3" data-name="icon/navigation/arrow_drop_up_24px" transform="translate(8)">
+    <path id="icon_navigation_arrow_drop_up_24px-4" data-name="icon/navigation/arrow_drop_up_24px" d="M0,4,4,0,8,4Z" fill="none"/>
+    <g clip-path="url(#clip-path)">
+      <g id="_Color" data-name="↳ Color" transform="translate(-5.6 -7.2)">
+        <rect id="_Color_background" data-name="↳ Color background" width="19.2" height="19.2" fill="#0276c0"/>
+        <rect id="Rectangle" width="19.2" height="19.2" fill="#0276c0"/>
+      </g>
+    </g>
+  </g>
+  <g id="icon_navigation_arrow_drop_up_24px-5" data-name="icon/navigation/arrow_drop_up_24px" transform="translate(16 24) rotate(180)">
+    <path id="icon_navigation_arrow_drop_up_24px-6" data-name="icon/navigation/arrow_drop_up_24px" d="M0,4,4,0,8,4Z" fill="none"/>
+    <g clip-path="url(#clip-path)">
+      <g id="_Color-2" data-name="↳ Color" transform="translate(-5.6 -7.2)">
+        <rect id="_Color_background-2" data-name="↳ Color background" width="19.2" height="19.2" fill="#0276c0"/>
+        <rect id="Rectangle-2" data-name="Rectangle" width="19.2" height="19.2" fill="#0276c0"/>
+      </g>
+    </g>
+  </g>
+</svg>

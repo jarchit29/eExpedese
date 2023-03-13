@@ -1,10 +1,13 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ionic-app-base',
+  appId: 'com.hc.hcmobile',
+  appName: 'Home Connect',
   webDir: 'build',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+  // ios: {
+  //   "preferredContentMode": "mobile"
+  // },
 };
 
 export default config;

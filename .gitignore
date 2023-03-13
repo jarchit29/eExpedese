@@ -2,14 +2,21 @@
 
 # dependencies
 /node_modules
+/CBL-Docs
 /.pnp
 .pnp.js
+
+# Build related dependencies
+
+/android
+/build
 
 # testing
 /coverage
 
 # production
 /build
+/android
 
 # misc
 .DS_Store
@@ -17,8 +24,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-/.vscode/*
-!/.vscode/extensions.json
+.vscode
 .idea
 
 npm-debug.log*
