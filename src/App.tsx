@@ -40,8 +40,6 @@ import AlertSessionTimeOut from "./components/Alerts/AlertSessionTimeOut";
 import { useHistory } from "react-router-dom";
 import { withRouter } from "react-router";
 
-// Deep links
-import AppUrlListener from "./Deep Links/AppUrlListener";
 
 import { TextZoom } from "@capacitor/text-zoom";
 
@@ -69,7 +67,6 @@ const App: React.FC = () => {
     <Provider store={Store}>
       <IonApp>
         <Routes />
-        <AppUrlListener />
       </IonApp>
     </Provider>
   );

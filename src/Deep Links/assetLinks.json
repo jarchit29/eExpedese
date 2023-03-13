@@ -1,5 +1,0 @@
-[{
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target" : { "namespace": "android_app", "package_name": "com.hc.hcmobile",
-                 "sha256_cert_fingerprints": ["0E:CB:17:F4:64:AF:FF:2F:3E:F1:77:21:F8:DE:AA:6A:AA:91:17:5F:16:02:0C:80:37:95:9E:B7:2C:5B:9F:F9"] }
-  }]
