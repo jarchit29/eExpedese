@@ -44,7 +44,8 @@ const Login = () => {
   const handleClick =(e) =>{
 
     e.preventDefault();
-    history.push("/HomePage")
+    // history.push("/HomePage")
+    (!inputs.userId || !inputs.pin)?setShowError(true):history.push("/HomePage")
     
   }
 
