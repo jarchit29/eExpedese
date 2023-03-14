@@ -5,10 +5,8 @@ import { Redirect, Route } from "react-router-dom";
 import { Welcome } from "../components/Welcome/Welcome";
 import { PortalList } from "../pages/PortalList";
 import { useDispatch } from "react-redux";
-import HomePage from "../components/Home Page/HomePage";  
+import HomePage from "../pages/Home Page/HomePage";  
 import Login from "../pages/Login";
-import { Bids } from "../pages/Bids";
-import { Messages } from "../components/Messages/Messages";
 import OnboardingScreen from "../pages/OnboardingScreen";
 
 
@@ -49,8 +47,7 @@ function Routes() {
           <Route exact path="/PortalList" component={PortalList} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/HomePage" component={HomePage} />
-          <Route exact path="/Bids" component={Bids} />
-          <Route exact path="/Messages" component={Messages} />
+          
         </>
       </IonRouterOutlet>
     </IonReactRouter>

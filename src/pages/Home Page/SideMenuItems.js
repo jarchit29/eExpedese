@@ -16,8 +16,8 @@ import download from "../../Style/Images/download.png";
 import { login } from "../../redux/Authentication";
 import { useState } from "react";
 import { setStatus } from "../../redux/AlertStatus";
-import AlertOnExit from "../Alerts/AlertOnExit";
-import { AlertOnLogout } from "../Alerts/AlertOnLogout";
+import AlertOnExit from "../../components/Alerts/AlertOnExit";
+import { AlertOnLogout } from "../../components/Alerts/AlertOnLogout";
 import userGuide from "../../Style/UserGuide.pdf";
 //Imports from components
 

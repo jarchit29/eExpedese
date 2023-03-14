@@ -1,15 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { Header } from "../Miscellaneous/Header";
+import { Header } from "../../components/Miscellaneous/Header";
 import { BottomNavBar } from "./BottomNavBar";
-import { PropertiesList } from "../Properties/List/PropertiesList";
-import { Bids } from "../../pages/Bids";
-import { Messages } from "../Messages/Messages";
 import { App as app } from "@capacitor/app";
 import { setStatus } from "../../redux/AlertStatus";
-import AlertOnExit from "../Alerts/AlertOnExit";
+import AlertOnExit from "../../components/Alerts/AlertOnExit";
 import { Capacitor } from "@capacitor/core";
 import { createGesture, Gesture } from "@ionic/react";
 import { useDispatch  } from "react-redux";   
+import UserDashBoard from "../UserDashBoard";
 
 const HomePage = () => {
   //Use State for setting page
@@ -55,13 +53,11 @@ let dispatch = useDispatch();
     <ion-content ref={swipeGesture}>
 
       <div>
-        <Header HeaderTitle={page} backArrow={false} hamBurgerMenu={true} />
+        <Header HeaderTitle={page} backArrow={true} hamBurgerMenu={false} />
 
         {/* <SideMenuItems setPage={setPage} /> */}
 
-        {page === "Properties" && <PropertiesList />}
-        {page === "My bids" && <Bids />}
-        {page === "My messages" && <Messages />}
+        {page==="Home" && <UserDashBoard/>}
 
         <BottomNavBar setPage={setPage} page={page} />
         
