@@ -44,6 +44,7 @@ const Login = () => {
   const handleClick =(e) =>{
 
     e.preventDefault();
+    history.push("/HomePage")
     
   }
 

@@ -12,7 +12,7 @@ import UserDashBoard from "../UserDashBoard";
 const HomePage = () => {
   //Use State for setting page
 
-  const [page, setPage] = useState(localStorage.getItem("Page"));
+  const [page, setPage] = useState("Home");
   const [showAlert, setShowAlert] = useState(false);
 
   const swipeGesture = useRef(createGesture({ onMove: true }));

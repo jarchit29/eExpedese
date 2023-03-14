@@ -38,7 +38,7 @@ const SlideOne = () => {
         <button
           className="ff-semi skip font_18 white"
           onClick={() => {
-            history.push("/PortalList");
+            history.push("/Login");
             localStorage.setItem("firstTimeOnboarding", "false");
           }}
         >

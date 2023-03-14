@@ -42,13 +42,13 @@ export const Welcome = () => {
         </div>
         
         <div className="mt-80">
-          <button type="button" class="btn btn-lg btn-outline-primary rounded-pill " onClick={()=>{history.push("/PortalList")}}>Get Started</button>
+          <button type="button" class="btn btn-lg btn-outline-primary rounded-pill " onClick={()=>{history.push("/Login")}}>Get Started</button>
           </div>
 
         <button
           className="ff-semi skip font_18 white"
           onClick={() => {
-            history.push("/PortalList");      
+            history.push("/Login");      
             localStorage.setItem("firstTimeOnboarding", "false");
           }}
         >

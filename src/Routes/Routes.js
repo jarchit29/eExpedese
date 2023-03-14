@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { IonReactRouter } from "@ionic/react-router";
 import { Redirect, Route } from "react-router-dom";
 import { Welcome } from "../components/Welcome/Welcome";
-import { PortalList } from "../pages/PortalList";
 import { useDispatch } from "react-redux";
 import HomePage from "../pages/Home Page/HomePage";  
 import Login from "../pages/Login";
@@ -45,7 +44,6 @@ function Routes() {
 
           <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/OnboardingScreen" component={OnboardingScreen} />
-          <Route exact path="/PortalList" component={PortalList} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/HomePage" component={HomePage} />
           <Route exact path= "/SlideTwo" component={SlideTwo}/>
