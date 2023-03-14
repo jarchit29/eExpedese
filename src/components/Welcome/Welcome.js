@@ -33,52 +33,41 @@ export const Welcome = () => {
   };
 
   return (
-    <ion-content>
-      <div className="welcome-bg">
-        <div className="body ">
-          <div className=" h-100">
-            <div className="p-60 position-relative">
-              <img
-                className="d-flex m-auto pt-2"
-                src={imgLogo2}
-                alt="Home connections logo"
-              />
-            </div>
-            <div className="container mt-9m d-set">
-              <div className="row px-4 px-md-0 conect">
-                <div className="col p-3 text-center">
-                  <img
-                    src={imgForSale}
-                    className="img-fluid pt-5 mt-3"
-                    alt="Properties for rent "
-                  />
-                </div>
-                <div className="text-center px-4">
-                  <p className="font_20 mb-0 text-color l_h_26 ff-reg">
-                    Welcome to
-                  </p>
-                  <h2 className="ff-bold font_28 text-color m_0">
-                    Home Connections
-                  </h2>
-                  <p className="font_14 mb-0 text-color l_h_26 ff-reg">
-                    choice-based lettings app
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="px-4"></div>
-          <div className="d-flex justify-content-center overflow-auto get-start">
-            <button
-              className="btn bg-white position-fixed w-10 mt-5 font_14 py-2 ff-semi blue-btn letter-s getStarted"
-              onClick={clickGetStarted}
-            >
-              Get started
-            </button>
-            <img src={imgBottomBg} alt="" />
-          </div>
+    <>
+      <div id="onboardingCntr">
+        <div className="wel-logo">
+          <a href="#">
+            {/* <img src={logo} alt="homeconnection logo" /> */}
+          </a>
         </div>
+        <div className="welcome-logo">
+          {/* <img src={welcomeLogo} alt="welcome logo " /> */}
+        </div>
+        <div className="prop-detail">
+          <h3 className="ff-reg font_20 white">
+            <span className="ff-bold  font_28 white">Consult Doctors at home</span>
+          </h3>
+          <p className="ff-reg font_18 white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt quaerat animi molestias quos corporis voluptates, nemo repellendus dignissimos minus amet nostrum impedit.
+          </p>
+        </div>
+        
+        <div className="mt-80">
+          <button type="button" class="btn btn-lg btn-outline-primary rounded-pill " onClick={()=>{history.push("/PortalList")}}>Get Started</button>
+          </div>
+
+        <button
+          className="ff-semi skip font_18 white"
+          onClick={() => {
+            history.push("/PortalList");      
+            localStorage.setItem("firstTimeOnboarding", "false");
+          }}
+        >
+          Skip
+        </button>
+
+        <div className="clearfix"></div>
       </div>
-    </ion-content>
+    </>
   );
 };

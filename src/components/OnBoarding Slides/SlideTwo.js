@@ -14,48 +14,29 @@ const SlideTwo = () => {
       <div id="onboardingCntr">
         <div className="wel-logo">
           <a href="#">
-            <img src={logo} alt="homeconnection logo" />
+            {/* <img src={logo} alt="homeconnection logo" /> */}
           </a>
         </div>
         <div className="welcome-logo">
-          <img src={welcomeLogo} alt="welcome logo " />
+          {/* <img src={welcomeLogo} alt="welcome logo " /> */}
         </div>
         <div className="prop-detail">
           <h3 className="ff-reg font_20 white">
-            How to find your
-            <span className="ff-bold  font_28 white">Bid position</span>
+            <span className="ff-bold  font_28 white">Pill reminder</span>
           </h3>
           <p className="ff-reg font_18 white">
-            'Bid positon' will show you your expected bid position and 'place
-            bid' will place a bid on the property once a bid has been placed you
-            are able to 'withdraw a bid'.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt quaerat animi molestias quos corporis voluptates, nemo repellendus dignissimos minus amet nostrum impedit.
           </p>
         </div>
-        {/* <div className="welcomeArea">
-          <div className="page-image">
-            <div className="img-area">
-              <img src={slideImg1} />
-            </div>
-            <div className="img-area">
-              <img src={slideImg2} />
-            </div>
-            <div className="img-area">
-              <img src={slideImg3} />
-            </div>
-            <div className="img-area">
-              <img src={slideImg4} />
-            </div>
-            <div className="img-area">
-              <img src={slideImg5} />
-            </div>
-          </div>
-          <div className="clearfix"></div>
-        </div> */}
+        
+        {/* <div className="mt-80">
+          <button type="button" class="btn btn-lg btn-outline-primary rounded-pill " onClick={()=>{history.push("/Welcome")}}>Next</button>
+          </div> */}
 
         <button
           className="ff-semi skip font_18 white"
           onClick={() => {
-            history.push("/PortalList");
+            history.push("/PortalList");      
             localStorage.setItem("firstTimeOnboarding", "false");
           }}
         >

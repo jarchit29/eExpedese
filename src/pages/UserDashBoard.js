@@ -6,4 +6,4 @@ const UserDashBoard = () => {
   )
 }
 
-export default UserDashBoard
+export default UserDashBoard    

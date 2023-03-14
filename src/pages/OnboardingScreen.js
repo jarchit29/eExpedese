@@ -26,9 +26,6 @@ const OnboardingScreen = () => {
           <SlideTwo />
         </IonSlide>
         <IonSlide>
-          <SlideThree />
-        </IonSlide>
-        <IonSlide>
           <Welcome />
         </IonSlide>
       </IonSlides>

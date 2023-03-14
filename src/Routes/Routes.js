@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import HomePage from "../pages/Home Page/HomePage";  
 import Login from "../pages/Login";
 import OnboardingScreen from "../pages/OnboardingScreen";
+import SlideTwo from "../components/OnBoarding Slides/SlideTwo";
 
 
 function Routes() {
@@ -47,6 +48,7 @@ function Routes() {
           <Route exact path="/PortalList" component={PortalList} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/HomePage" component={HomePage} />
+          <Route exact path= "/SlideTwo" component={SlideTwo}/>
           
         </>
       </IonRouterOutlet>

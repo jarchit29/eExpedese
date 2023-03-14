@@ -66,6 +66,7 @@ let dispatch = useDispatch();
       {showAlert && (
         <AlertOnExit showAlert={showAlert} setShowAlert={setShowAlert} />
       )}
+      
     </ion-content>
   );
 };
