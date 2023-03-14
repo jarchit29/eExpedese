@@ -1,17 +1,6 @@
 //Imports from LIBRARIES
 import { useHistory } from "react-router-dom";
 
-//Imports from IMAGES
-import imgBottomBg from "../../Style/Images/bottom-bg.svg";
-import imgLogo2 from "../../Style/Images/logo2.png";
-import imgForSale from "../../Style/Images/for-sale-pana.svg";
-import IdleTimer2 from "../Miscellaneous/Idletimer2";
-import IdleTimer1 from "../IdleTimer/IdleTimer";
-import { PhotoViewer } from "@ionic-native/photo-viewer";
-import { isPlatform } from "@ionic/react";
-import { getPlatforms } from "@ionic/react";
-import { Spinner } from "../Miscellaneous/Spinner";
-import userGuide from "../../Style/UserGuide.pdf";
 // import slide1 from "../../Style/Images/slide-1.jpg";
 
 // import { IonAlert, IonPage,IonContent } from "@ionic/react";

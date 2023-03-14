@@ -1,10 +1,4 @@
-import logo from "../../Style/Images/logo3.png";
-import welcomeLogo from "../../Style/Images/welcome-logo.png";
-import slideImg1 from "../../Style/Images/slide_img1.png";
-import slideImg2 from "../../Style/Images/slide_img2.png";
-import slideImg3 from "../../Style/Images/slide_img3.png";
-import slideImg4 from "../../Style/Images/slide_img4.png";
-import slideImg5 from "../../Style/Images/slide_img5.png";
+
 import { useHistory } from "react-router-dom";
 import { IonButton } from "@ionic/react";
 
