@@ -125,6 +125,7 @@ const Login = () => {
                         Remember me
                       </label>
                     </div> */}
+                    <p className="gray" style={{textAlign:"right"}}>Forgot password ?</p>
                   
                     <div className="">
                       <button
@@ -133,6 +134,7 @@ const Login = () => {
                       >
                         SIGN IN
                       </button>
+                      By Signing in you Agree to our <a href="#" style={{color:"red"}}>Terms & conditions</a> and <a href="" style={{color:"red"}}>Privacy Policy</a>
                     </div>
                   </form>
                 </div>
