@@ -22,7 +22,7 @@ let history = useHistory();
         <div className="row">
           {props.data.map((item) => {
             return (
-              <IonCard className="col-3 mt-3 " color="primary" onClick={()=>{history.push(`${item.routeTo}`)}}>
+              <IonCard className="col-3 mt-3 " color="primary" style={{borderStyle:"solid" , borderColor:"black"}} onClick={()=>{history.push(`${item.routeTo}`)}}>
                 <img src={item.img} />
                 <IonCardContent >{item.title}</IonCardContent>
               </IonCard>
