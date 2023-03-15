@@ -8,6 +8,12 @@ import HomePage from "../pages/Home Page/HomePage";
 import Login from "../pages/Login";
 import OnboardingScreen from "../pages/OnboardingScreen";
 import SlideTwo from "../components/OnBoarding Slides/SlideTwo";
+import Medicines from "../pages/UserDashBoard/Medicines";
+import LabTests from "../pages/UserDashBoard/LabTests";
+import DoctorConsults from "../pages/UserDashBoard/DoctorConsults";
+import PillReminder from "../pages/UserDashBoard/PillReminder";
+import { HealthRecords } from "../pages/UserDashBoard/HealthRecords";
+import ChronicDiseases from "../pages/UserDashBoard/ChronicDiseases";
 
 
 function Routes() {
@@ -40,13 +46,20 @@ function Routes() {
             <Route exact path="/" component={OnboardingScreen} />
           )} */}
 
-            <Route exact path="/" component={OnboardingScreen} />
+          <Route exact path="/" component={OnboardingScreen} />
 
           <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/OnboardingScreen" component={OnboardingScreen} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/HomePage" component={HomePage} />
           <Route exact path= "/SlideTwo" component={SlideTwo}/>
+
+          <Route exact path="/Medicines" component={Medicines}/>
+          <Route exact path="/LabTests" component={LabTests}/>
+          <Route exact path="/DoctorConsults" component={DoctorConsults}/>
+          <Route exact path="/PillReminder" component={PillReminder}/>
+          <Route exact path="/HealthRecords" component={HealthRecords}/>
+          <Route exact path="/ChronicDisease" component={ChronicDiseases}/>
           
         </>
       </IonRouterOutlet>
