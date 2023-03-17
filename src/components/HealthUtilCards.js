@@ -2,11 +2,6 @@ import React from 'react'
 import {
     IonCard,
     IonCardContent,
-    IonCardHeader,
-    IonCardSubtitle,
-    IonCardTitle,
-    IonHeader,
-    IonTitle,
   } from "@ionic/react";
   import { useHistory } from "react-router";
 
