@@ -7,7 +7,8 @@ import AlertOnExit from "../../components/Alerts/AlertOnExit";
 import { Capacitor } from "@capacitor/core";
 import { createGesture, Gesture } from "@ionic/react";
 import { useDispatch  } from "react-redux";   
-import UserDashBoard from "../UserDashBoard";
+import UserDashBoard from "../UserDashBoard/UserDashBoard";
+import { DashboardHeader } from "../../components/Miscellaneous/DashBoardHeader";
 
 const HomePage = () => {
   //Use State for setting page
@@ -53,7 +54,7 @@ let dispatch = useDispatch();
     <ion-content ref={swipeGesture}>
 
       <div>
-        <Header HeaderTitle={page} backArrow={true} hamBurgerMenu={false} />
+        <DashboardHeader DashboardHeaderTitle="Welcome Archit"  salutation="Good Morning " backArrow={false} hamBurgerMenu={false} userInfo={true} />
 
         {/* <SideMenuItems setPage={setPage} /> */}
 

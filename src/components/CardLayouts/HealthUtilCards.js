@@ -12,7 +12,7 @@ let history = useHistory();
 
 
   return (
-    <div style={{ marginTop: "200px" }}>
+    <div>
       <IonCard style={{ paddingLeft: "4px" }}>
         <div className="row">
           {props.data.map((item) => {

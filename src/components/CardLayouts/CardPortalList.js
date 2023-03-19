@@ -12,7 +12,7 @@ export const CardPortalList = (props) => {
               className="container "
               onClick={props.cardClick}
             >
-              <div className="row px-4 px-md-0 pb-3">
+              <div className="row px-4 px-md-0 pb-3">    
                 <div className="col-12 border bdr-rad mb-3 box-bg d-flex align-items-center">
                   <img
                     className=""
