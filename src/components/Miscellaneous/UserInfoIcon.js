@@ -36,10 +36,16 @@ const UserInfoIcon = (props) => {
 
             </div>
             <div className='flexNoMarginiContainer'>
-               
-               <MedicalDetailsCard/>
-               <MedicalDetailsCard/>
-               <MedicalDetailsCard/>
+
+             {
+                props.data.map((item)=>{
+
+                    return(
+                        <MedicalDetailsCard/>
+                        
+                    )
+                })
+             }  
 
 
             </div>

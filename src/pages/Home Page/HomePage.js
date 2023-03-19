@@ -11,6 +11,7 @@ import UserDashBoard from "../UserDashBoard/UserDashBoard";
 import { DashboardHeader } from "../../components/Miscellaneous/DashBoardHeader";
 
 const HomePage = () => {
+
   //Use State for setting page
 
   const [page, setPage] = useState("Home");
@@ -18,6 +19,15 @@ const HomePage = () => {
 
   const swipeGesture = useRef(createGesture({ onMove: true }));
   // const swipeGesture = useRef(null);
+
+  // Harcoded Jsons
+  const userHeaderData = [
+
+    {Value :"66" , Unit :"kg", icon:"Icon" , Attribute:"Weight" , Date:"10/03/2023"},
+    {Value :"66" , Unit :"kg", icon:"Icon" , Attribute:"Weight" , Date:"10/03/2023"},
+    {Value :"66" , Unit :"kg", icon:"Icon" , Attribute:"Weight" , Date:"10/03/2023"},
+
+  ]
 
 let dispatch = useDispatch();
   //TODO: add ionic-alert box to exit app
@@ -54,7 +64,7 @@ let dispatch = useDispatch();
     <ion-content ref={swipeGesture}>
 
       <div>
-        <DashboardHeader DashboardHeaderTitle="Welcome Archit"  salutation="Good Morning " backArrow={false} hamBurgerMenu={false} userInfo={true} />
+        <DashboardHeader DashboardHeaderTitle="Welcome Archit"  salutation="Good Morning " backArrow={false} hamBurgerMenu={false} userInfo={true} data={userHeaderData} />
 
         {/* <SideMenuItems setPage={setPage} /> */}
 
