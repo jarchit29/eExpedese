@@ -2,6 +2,7 @@ import React from 'react'
 import {
     IonCard,
     IonCardContent,
+    IonText,
   } from "@ionic/react";
   import { useHistory } from "react-router";
 
@@ -13,13 +14,17 @@ let history = useHistory();
 
   return (
     <div>
-      <IonCard style={{ paddingLeft: "4px" }} className="d-flex justify-content-center">
+      <IonCard className="d-flex justify-content-center p-2">
         <div className="row text-center">
           {props.data.map((item) => {
             return (
-              <IonCard className="col-3 mt-3 healthUtilCard" color="primary"  onClick={()=>{history.push(`${item.routeTo}`)}}>
+              <IonCard className="col-3 mt-3 healthUtilCard"  onClick={()=>{history.push(`${item.routeTo}`)}}>
                 <img src={item.img} />
-                <IonCardContent >{item.title}</IonCardContent>
+                <IonCardContent >
+                  <IonText className="font_8" text-wrap>
+                  {item.title}
+                  </IonText>
+                  </IonCardContent>
               </IonCard>
             );
           })}

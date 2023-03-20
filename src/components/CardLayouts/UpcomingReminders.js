@@ -17,7 +17,7 @@ const UpcomingReminders = (props) => {
 
 
                             return (
-                                <IonCard>
+                                <IonCard >
                                     <IonCardContent>
                                         <div className='flex-container'>
                                             <div>

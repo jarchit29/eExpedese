@@ -218,6 +218,9 @@ body {
   /* background-color: var(--back-color) ; */
   background-color: var(--back-color);
 }
+.font_8 {
+  font-size: 8px;
+}
 .font_10 {
   font-size: 10px;
 }
@@ -1868,8 +1871,11 @@ ion-slides {
   border: 1px solid #00FFFF;
   background-color: #F6F9FE;
   color: #161531;
-  font-size: 8px;
+  font-size: 8px !important;
   border-radius: 8px;
   /* width: 50%; */
 
 }
+  /* .card-content-md{
+    font-size: 8px !important;
+  } */
