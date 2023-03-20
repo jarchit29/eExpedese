@@ -40,7 +40,7 @@ export const DashboardHeader = (props) => {
                         )}
 
                         {props.userInfo ? (
-                            <UserInfoIcon title={props.DashboardHeaderTitle} salutation = {props.salutation} data={props.data} />
+                            <UserInfoIcon title={props.DashboardHeaderTitle} salutation = {props.salutation} data={props.data} onClick={props.onClick} />
                         ) : (
                             " "
                         )}

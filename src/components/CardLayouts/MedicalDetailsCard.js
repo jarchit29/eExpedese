@@ -1,7 +1,7 @@
 import { IonCard, IonCardContent } from '@ionic/react'
 import React from 'react'
 
-const MedicalDetailsCard = () => {
+const MedicalDetailsCard = (props) => {
     return (
 
         <IonCard>
@@ -10,14 +10,14 @@ const MedicalDetailsCard = () => {
 
                     <div>
                         <span className='text-primary'>
-                            66
+                            {props.data.Value}
                         </span>
                         <span>
-                            Kg
+                            {props.data.Unit}
                         </span>
                     </div>
                     <div className='mx-4'>
-                        Icon
+                        {props.data.icon}
                     </div>
 
                 </div>
@@ -25,10 +25,10 @@ const MedicalDetailsCard = () => {
 
                     <div>
                         <p className='text-primary'>
-                            Weight
+                            {props.data.Attribute}
                         </p>
                         <p>
-                            10/03/2023
+                            {props.data.Date}
                         </p>
                     </div>
  

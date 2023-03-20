@@ -1,5 +1,6 @@
 //Imports from LIBRARIES
 import { useHistory } from "react-router-dom";
+import ButtonBlock from "../Buttons/ButtonBlock";
 
 // import slide1 from "../../Style/Images/slide-1.jpg";
 
@@ -20,6 +21,10 @@ export const Welcome = () => {
     history.push("/PortalList");
     localStorage.setItem("firstTimeOnboarding", "false");
   };
+
+  let onButtonClick =()=>{
+    history.push("/Login")
+  }
 
   return (
     <>
@@ -42,7 +47,10 @@ export const Welcome = () => {
         </div>
         
         <div className="mt-80">
-          <button type="button" class="btn btn-lg btn-outline-primary rounded-pill " onClick={()=>{history.push("/Login")}}>Get Started</button>
+          {/* <button type="button" class="btn btn-lg btn-outline-primary rounded-pill " onClick={()=>{history.push("/Login")}}>Get Started</button> */}
+
+          <ButtonBlock label="GET STARTED" onButtonClick={onButtonClick}/>
+
           </div>
 
         <button

@@ -9,8 +9,12 @@ import { createGesture, Gesture } from "@ionic/react";
 import { useDispatch  } from "react-redux";   
 import UserDashBoard from "../UserDashBoard/UserDashBoard";
 import { DashboardHeader } from "../../components/Miscellaneous/DashBoardHeader";
+import { useHistory } from "react-router-dom";
 
 const HomePage = () => {
+
+  // Imports 
+  let history = useHistory();
 
   //Use State for setting page
 
@@ -31,6 +35,12 @@ const HomePage = () => {
 
 let dispatch = useDispatch();
   //TODO: add ionic-alert box to exit app
+
+  let onProfileIcon = ()=>{
+    
+    history.push("/EditProfile")
+  }
+
 
   useEffect(() => {
     if (Capacitor.isNative) {
@@ -64,7 +74,7 @@ let dispatch = useDispatch();
     <ion-content ref={swipeGesture}>
 
       <div>
-        <DashboardHeader DashboardHeaderTitle="Welcome Archit"  salutation="Good Morning " backArrow={false} hamBurgerMenu={false} userInfo={true} data={userHeaderData} />
+        <DashboardHeader DashboardHeaderTitle="Welcome Archit"  salutation="Good Morning " userInfo={true} data={userHeaderData} onClick={onProfileIcon} />
 
         {/* <SideMenuItems setPage={setPage} /> */}
 

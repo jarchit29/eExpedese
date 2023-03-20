@@ -15,6 +15,7 @@ const UserInfoIcon = (props) => {
                     data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvas"
                     role="button"
+                    onClick={props.onClick}
                 >
                     <a data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
                         <img
@@ -41,7 +42,7 @@ const UserInfoIcon = (props) => {
                 props.data.map((item)=>{
 
                     return(
-                        <MedicalDetailsCard/>
+                        <MedicalDetailsCard data={item}/>
                         
                     )
                 })

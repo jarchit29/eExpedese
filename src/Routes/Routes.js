@@ -14,6 +14,7 @@ import DoctorConsults from "../pages/UserDashBoard/DoctorConsults";
 import PillReminder from "../pages/UserDashBoard/PillReminder";
 import { HealthRecords } from "../pages/UserDashBoard/HealthRecords";
 import ChronicDiseases from "../pages/UserDashBoard/ChronicDiseases";
+import EditProfile from "../pages/EditProfile";
 
 
 function Routes() {
@@ -53,13 +54,13 @@ function Routes() {
           <Route exact path="/Login" component={Login} />
           <Route exact path="/HomePage" component={HomePage} />
           <Route exact path= "/SlideTwo" component={SlideTwo}/>
-
           <Route exact path="/Medicines" component={Medicines}/>
           <Route exact path="/LabTests" component={LabTests}/>
           <Route exact path="/DoctorConsults" component={DoctorConsults}/>
           <Route exact path="/PillReminder" component={PillReminder}/>
           <Route exact path="/HealthRecords" component={HealthRecords}/>
           <Route exact path="/ChronicDisease" component={ChronicDiseases}/>
+          <Route exact path="/EditProfile" component={EditProfile}/>
           
         </>
       </IonRouterOutlet>

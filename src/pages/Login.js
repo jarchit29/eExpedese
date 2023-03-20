@@ -14,9 +14,9 @@ import eyeClose from "../Style/Images/eyeClose.jpg";
 import { login } from "../redux/Authentication";
 import { SpinnerForLogin } from "../components/Miscellaneous/SpinnerForLogin";
 import AlertOnLogin from "../components/Alerts/AlertOnLogin";
+import ButtonBlock from "../components/Buttons/ButtonBlock";
 
 const Login = () => {
-
   const [showError, setShowError] = useState(false);
   const [showSpinner, setShowSpinner] = useState(false);
 
@@ -31,7 +31,7 @@ const Login = () => {
   });
 
   // Show and hide password
-  const [showPassowrd, setShowPassowrd] = useState(true)
+  const [showPassowrd, setShowPassowrd] = useState(true);
 
   //function to handle change event
   const handleChange = (e) => {
@@ -40,14 +40,14 @@ const Login = () => {
     setShowError(false);
   };
 
-  // Function for handle click 
-  const handleClick =(e) =>{
-
+  // Function for handle click
+  const handleClick = (e) => {
     e.preventDefault();
     // history.push("/HomePage")
-    (!inputs.userId || !inputs.pin)?setShowError(true):history.push("/HomePage")
-    
-  }
+    !inputs.userId || !inputs.pin
+      ? setShowError(true)
+      : history.push("/HomePage");
+  };
 
   return (
     <ion-content>
@@ -56,61 +56,75 @@ const Login = () => {
         {showSpinner && <SpinnerForLogin />}
 
         <div className="loginBox">
-           
-            <div className="banner-gr position-relative height-236">
-              {/* <img className="d-flex m-auto pt-5" src={logo} alt="" /> */}
-              <p className="d-flex m-auto pt-5 " style={{fontSize:"20px"}}>MedCuratio(A unit of eExpedise group)</p>
-            </div>
-            <div className="container d-set">
-              <div className="row px-4 px-md-0 login">
-                <div className="col card box-shw bdr-rad px-3 py-4">
-                  
-                  <h5 className="text-center font_16 ff-semi">Login</h5>                  
+          <div className="banner-gr position-relative height-236">
+            {/* <img className="d-flex m-auto pt-5" src={logo} alt="" /> */}
+            <p className="d-flex m-auto pt-5 " style={{ fontSize: "20px" }}>
+              MedCuratio(A unit of eExpedise group)
+            </p>
+          </div>
+          <div className="container d-set">
+            <div className="row px-4 px-md-0 login">
+              <div className="col card box-shw bdr-rad px-3 py-4">
+                <h5 className="text-center font_16 ff-semi">Login</h5>
 
-                  <form>
-                      <label className="font_14 form-label ff-semi">
-                        Email id / Phone Number * 
-                      </label>
-                    <div className="input-group mb-3">
-                      <span className="input-group-text" id="basic-addon1">
-                        <img src={imgUser} alt="" />
-                      </span>
-                      <input
-                          value={inputs.userId}
-                          name="userId"
-                          onChange={handleChange}
-                          type="text"
-                          className="form-control ff-reg"
-                          placeholder="Enter Email/Phone Number"
-                          // aria-label="Enter household ID"
-                          aria-describedby="basic-addon1"
+                <form>
+                  <label className="font_14 form-label ff-semi">
+                    Email id / Phone Number *
+                  </label>
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      <img src={imgUser} alt="" />
+                    </span>
+                    <input
+                      value={inputs.userId}
+                      name="userId"
+                      onChange={handleChange}
+                      type="text"
+                      className="form-control ff-reg"
+                      placeholder="Enter Email/Phone Number"
+                      // aria-label="Enter household ID"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                  <label className="font_14 form-label ff-semi">
+                    Password*
+                  </label>
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon2">
+                      <img src={imgPassKey} alt="" />
+                    </span>
+                    <input
+                      value={inputs.pin}
+                      name="pin"
+                      onChange={handleChange}
+                      type={showPassowrd ? `password` : `text`}
+                      className="form-control ff-reg"
+                      placeholder="Enter password"
+                      // aria-label="Enter password"
+                      aria-describedby="basic-addon2"
+                    />
+                    <span className="input-group-text" id="basic-addon2">
+                      {showPassowrd ? (
+                        <img
+                          src={eyeOn}
+                          alt=""
+                          onClick={() => {
+                            setShowPassowrd(false);
+                          }}
                         />
-                    </div>
-                    <label className="font_14 form-label ff-semi">
-                      Password*
-                    </label>
-                    <div className="input-group mb-3">
-                      <span className="input-group-text" id="basic-addon2">
-                        <img src={imgPassKey} alt="" />
-                      </span>
-                      <input
-                        value={inputs.pin}
-                        name="pin"
-                        onChange={handleChange}
-                        type={showPassowrd?`password`:`text`}
-                        className="form-control ff-reg"
-                        placeholder="Enter password"
-                        // aria-label="Enter password"
-                        aria-describedby="basic-addon2"
-                      />
-                      <span className="input-group-text" id="basic-addon2">
-                      {showPassowrd?<img src={eyeOn} alt="" onClick={()=>{setShowPassowrd(false)}} />:<img src={eyeClose} alt="" onClick={()=>{setShowPassowrd(true)}} />}
-                      </span>
-                      
-                    </div>
-                    
-                  
-                    {/* <div className="form-check pb-3">
+                      ) : (
+                        <img
+                          src={eyeClose}
+                          alt=""
+                          onClick={() => {
+                            setShowPassowrd(true);
+                          }}
+                        />
+                      )}
+                    </span>
+                  </div>
+
+                  {/* <div className="form-check pb-3">
                       <input
                         onClick={handleClickRememberMe}
                         className="form-check-input"
@@ -125,24 +139,35 @@ const Login = () => {
                         Remember me
                       </label>
                     </div> */}
-                    <p className="gray" style={{textAlign:"right"}}>Forgot password ?</p>
-                  
-                    <div className="">
-                      <button
-                        onClick={handleClick}
-                        className="btn btn-primary border-0 w-100 mb-3 font_14 m_t_5 p_tb_lr blue-bg"
-                      >
-                        SIGN IN
-                      </button>
-                      By Signing in you Agree to our <a href="#" style={{color:"red"}}>Terms & conditions</a> and <a href="" style={{color:"red"}}>Privacy Policy</a>
+                  <p className="gray" style={{ textAlign: "right" }}>
+                    Forgot password ?
+                  </p>
+
+                  <div className="">
+                    <div>
+                      <ButtonBlock
+                        label="SIGN IN"
+                        onButtonClick={handleClick}
+                      />
                     </div>
-                  </form>
-                </div>
+
+                    <div className="mt-4">
+                      By Signing in you Agree to our{" "}
+                      <a href="#" style={{ color: "red" }}>
+                        Terms & conditions
+                      </a>{" "}
+                      and{" "}
+                      <a href="" style={{ color: "red" }}>
+                        Privacy Policy
+                      </a>
+                    </div>
+
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-      
-  
+        </div>
       </IonPage>
     </ion-content>
   );

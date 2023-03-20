@@ -1851,3 +1851,25 @@ ion-slides {
 
   display: flex;
 }
+
+.buttonBlock{
+
+  width: 90%;
+  font-size: 18px;
+  height: 57px;
+  color: #FFFFFF;
+  background-image: linear-gradient(#00FFFF,#083770);
+  border-radius: 29px;
+
+}
+
+.healthUtilCard{
+
+  border: 1px solid #00FFFF;
+  background-color: #F6F9FE;
+  color: #161531;
+  font-size: 8px;
+  border-radius: 8px;
+  /* width: 50%; */
+
+}
