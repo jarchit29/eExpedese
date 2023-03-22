@@ -21,7 +21,7 @@ let history = useHistory();
               <IonCard className="col-3 mt-3 healthUtilCard"  onClick={()=>{history.push(`${item.routeTo}`)}}>
                 <img src={item.img} />
                 <IonCardContent >
-                  <IonText className="font_8" text-wrap>
+                  <IonText className="font_12" text-wrap>
                   {item.title}
                   </IonText>
                   </IonCardContent>

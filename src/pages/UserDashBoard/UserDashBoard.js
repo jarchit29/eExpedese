@@ -31,30 +31,31 @@ const UserDashBoard = () => {
 
   const upcomingRemindersdata = [
 
-    { Diagnostic: "Sugar test 9:00 AM", Medicine: "8:00 Am - 12:00 pm - 4:00pm - 8:00 pm", date: "15", month: "March" ,DocAppointment:"Dr.Raman"},
-    { Diagnostic: "CBC-Test 10:00 Am", Medicine: "8:00 Am - 12:00 pm - 4:00pm - 8:00 pm", date: "25", month: "March" ,DocAppointment:"Dr.Abdul Rehman"},
-    { Diagnostic: "medicine", Medicine: "8:00 Am - 12:00 pm - 4:00pm - 8:00 pm", date: "15", month: "March",DocAppointment:"Dr.Raman" }, 
+    { Diagnostic: "Sugar test 9:00 AM", Medicine: "8:00 Am - 12:00 pm - 4:00pm - 8:00 pm", date: "15", month: "March", DocAppointment: "Dr.Raman" },
+    { Diagnostic: "CBC-Test 10:00 Am", Medicine: "8:00 Am - 12:00 pm - 4:00pm - 8:00 pm", date: "25", month: "March", DocAppointment: "Dr.Abdul Rehman" },
+    { Diagnostic: "medicine", Medicine: "8:00 Am - 12:00 pm - 4:00pm - 8:00 pm", date: "15", month: "March", DocAppointment: "Dr.Raman" },
 
   ]
 
- 
+
 
 
 
   return (
 
-    <>
-
-     <div className="mt-200">
-
     
-      <HealthUtilCards data={userCardsData} />
-      <SecondMedOpinion />
-      <UpcomingReminders data={upcomingRemindersdata} />
-      
-      </div>
+      <>
 
-    </>
+        <div className="mt-200">
+          
+          <HealthUtilCards data={userCardsData} />
+          <SecondMedOpinion buttonLabel="BOOK NOW" content="Get a Medical Second Opinion" heading="NOT SATISFIED WITH YOUR DOCTOR" color="red" />
+          <UpcomingReminders data={upcomingRemindersdata} />
+
+        </div>
+
+      </>
+
   );
 };
 

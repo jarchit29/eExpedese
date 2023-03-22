@@ -1,26 +1,26 @@
 import { IonCard, IonCardContent, IonCardHeader } from '@ionic/react'
 import React from 'react'
 
-const SecondMedOpinion = () => {
+const SecondMedOpinion = (props) => {
     return (
         <div>
             <IonCard class='mt-4'>
-                <IonCardHeader>
-                    <p className='text-danger'>NOT SATISFIED WITH YOUR DOCTOR </p>
-                </IonCardHeader>
+                {props.heading ? (<IonCardHeader>
+                    <p style={{color:`${props.color}`}}>{props.heading} </p>
+                </IonCardHeader>) : <></>}
+                
+                <IonCardContent>    
                 <div className='flex-container'>
                     <div>
-                        <h5 style={{color:"#161531"}}>Get a second medical opinion</h5>
+                        <h5 style={{ color: "#161531" }}>{props.content}</h5>
                     </div>
                     <div>
                         <button className='lastItem buttonBg btn-lg'>
-                                Book Now 
+                            {props.buttonLabel}
                         </button>
                     </div>
 
                 </div>
-                <IonCardContent>
-
                 </IonCardContent>
             </IonCard>
         </div>
