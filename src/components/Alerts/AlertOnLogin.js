@@ -8,7 +8,7 @@ const AlertOnLogin = (props) => {
       <IonAlert
         isOpen={props.showError}
         onDidDismiss={() => props.setShowError(false)}
-        cssClass="my-custom-class"
+        cssclassName="my-custom-class"
         header='Error login!'
         // subHeader='Please check your details and try again.'
         message='Please check your details and try again.'

@@ -14,7 +14,7 @@ const AlertOnExit = (props) => {
         <IonAlert
           isOpen={props.showAlert}
           onDidDismiss={() => props.setShowAlert(false)}
-          cssClass="exit-alert"
+          cssclassName="exit-alert"
           header={"Exit this app"}
           // subHeader={'Subtitle'}
           message={"Are you sure you want to exit?"}

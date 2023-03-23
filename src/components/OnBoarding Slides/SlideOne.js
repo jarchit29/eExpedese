@@ -30,7 +30,7 @@ const SlideOne = () => {
         </div>
 
           {/* <div className="mt-80">
-          <button type="button" class="btn btn-lg btn-outline-primary rounded-pill " onClick={()=>{history.push("/SlideTwo")}}>Next</button>
+          <button type="button" className="btn btn-lg btn-outline-primary rounded-pill " onClick={()=>{history.push("/SlideTwo")}}>Next</button>
           </div> */}
 
       

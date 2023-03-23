@@ -4,7 +4,7 @@ const Seperator = (props) => {
     return (
         <div className='mt-3'>
 
-            <div class="header__center">{props.label}</div>
+            <div className="header__center">{props.label}</div>
 
         </div>
     )

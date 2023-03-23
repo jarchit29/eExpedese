@@ -10,16 +10,24 @@ import { BottomNavBar } from '../Home Page/BottomNavBar';
 const Medicines = () => {
   let history = useHistory();
   let content = "Upload a Prescription and Tell Us what you Need. We do the Rest.!"
+
+  // Define on CLicks
+  let onPresicriptionOrder =()=>{
+    
+    history.push('./UploadPrescription')
+  
+  }
+
   return (
     <div>
       <Header HeaderTitle="Medicines" backArrow={true} onBackArrow={() => { history.goBack() }} />
       <div className='mt-185'>
         <SubHeading label="Order Medicine" />
-        <SecondMedOpinion buttonLabel="ORDER NOW" content={content} heading="Upload Prescription" color="black" />
+        <SecondMedOpinion buttonLabel="ORDER NOW" content={content} heading="Upload Prescription" color="black" onUploadPrescription={onPresicriptionOrder}/>
         <Seperator label="OR" />
 
         <div className='text-center stickToBottom '>
-          <ButtonBlock label="ORDER" />
+          <ButtonBlock label="ORDER" onButtonClick={()=>{console.log("Task pending")}}/>
         </div>
       </div>
     </div>

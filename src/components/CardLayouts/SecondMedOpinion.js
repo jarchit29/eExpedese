@@ -4,7 +4,7 @@ import React from 'react'
 const SecondMedOpinion = (props) => {
     return (
         <div>
-            <IonCard class='mt-4'>
+            <IonCard className='mt-4'>
                 {props.heading ? (<IonCardHeader>
                     <p style={{color:`${props.color}`}}>{props.heading} </p>
                 </IonCardHeader>) : <></>}
@@ -15,7 +15,7 @@ const SecondMedOpinion = (props) => {
                         <h5 style={{ color: "#161531" }}>{props.content}</h5>
                     </div>
                     <div>
-                        <button className='lastItem buttonBg btn-lg'>
+                        <button className='lastItem buttonBg btn-lg' onClick={props.onUploadPrescription}>
                             {props.buttonLabel}
                         </button>
                     </div>

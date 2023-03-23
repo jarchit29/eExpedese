@@ -25,7 +25,7 @@ export const AlertOnLogout = (props) => {
         <IonAlert
           isOpen={props.showAlert}
           onDidDismiss={() => props.setShowAlert(false)}
-          cssClass="exit-alert"
+          cssclassName="exit-alert"
           header={"Logout this app"}
           // subHeader={'Subtitle'}
           message={"Are you sure you want to logout.?"}

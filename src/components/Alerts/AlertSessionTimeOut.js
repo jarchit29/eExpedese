@@ -14,7 +14,7 @@ const AlertSessionTimeOut = (props) => {
         <IonAlert
           isOpen={props.showAlert}
           onDidDismiss={() => props.setShowAlert(false)}
-          cssClass="exit-alert"
+          cssclassName="exit-alert"
           header={"Session time out"}
           // subHeader={'Subtitle'}
           message={"Please login again"}
