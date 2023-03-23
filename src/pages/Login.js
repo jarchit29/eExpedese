@@ -58,7 +58,7 @@ const Login = () => {
         <div className="loginBox">
           <div className="banner-gr position-relative height-236">
             {/* <img className="d-flex m-auto pt-5" src={logo} alt="" /> */}
-            <p className="d-flex m-auto pt-5 " style={{ fontSize: "20px" }}>
+            <p className="d-flex m-auto pt-5 mx-4 " style={{ fontSize: "20px" }}>
               MedCuratio(A unit of eExpedise group)
             </p>
           </div>

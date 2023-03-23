@@ -3,10 +3,15 @@ import ButtonBlock from "../components/Buttons/ButtonBlock";
 import { Header } from "../components/Miscellaneous/Header";
 import Seperator from "../components/Miscellaneous/Seperator";
 
+// From modules
+import { useHistory } from "react-router";
+
 const UploadPrescription = () => {
+    let history = useHistory();
   return (
     <div>
-      <Header backArrow={true} HeaderTitle="Upload Prescription" />
+      <Header backArrow={true} HeaderTitle="Upload Prescription" onBackArrow={()=>{history.goBack()}}/>
+
       <div className="mt-185 ">
         <h5 className="mx-3"> Have a Prescription ?</h5>
         <div className="text-center mt-4">
@@ -15,8 +20,11 @@ const UploadPrescription = () => {
         <h5 className="mx-3 mt-4">
           Your Attached Prescription would be secured and private
         </h5>
+        <div className="mt-4">
+
         <Seperator label="Know More" />
-        <div className="mx-3">
+        </div>
+        <div className="mx-3 mt-4">
           <h3>Why upload a prescripiton ?</h3>
           <div className="mt-4">
             <p>
@@ -28,15 +36,17 @@ const UploadPrescription = () => {
             </p>
           </div>
         </div>
+       
         <div className="text-center stickToBottom ">
           <ButtonBlock
             label="CONTINUE"
             onButtonClick={() => {
-              console.log("Task pending");
+              history.push("./Success")
             }}
           />
         </div>
       </div>
+
     </div>
   );
 };
