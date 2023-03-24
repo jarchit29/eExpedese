@@ -9,6 +9,7 @@ import { App as app } from "@capacitor/app";
 
 import "./Style/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick-theme.css";
 import "./Style/Style.css";
 

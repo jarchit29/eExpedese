@@ -8,7 +8,7 @@ const GoToHome = () => {
   let history = useHistory();
   return (
     <div>
-      <Header backArrow={true} HeaderTitle="Order Success :)" />
+      <Header backArrow={true} HeaderTitle="Order Success :)" onBackArrow={()=>{history.goBack()}} />
       <div className="mt-200">
         <IonCard>
           <IonCardContent>

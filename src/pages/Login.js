@@ -144,7 +144,7 @@ const Login = () => {
                   </p>
 
                   <div className="">
-                    <div>
+                    <div className="text-center">
                       <ButtonBlock
                         label="SIGN IN"
                         onButtonClick={handleClick}

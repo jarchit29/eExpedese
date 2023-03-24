@@ -17,9 +17,9 @@ const UploadPrescription = () => {
         <div className="text-center mt-4">
           <ButtonBlock label="Upload Prescription" />
         </div>
-        <h5 className="mx-3 mt-4">
+        <p className="mx-3 mt-4">
           Your Attached Prescription would be secured and private
-        </h5>
+        </p>
         <div className="mt-4">
 
         <Seperator label="Know More" />
