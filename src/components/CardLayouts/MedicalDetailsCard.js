@@ -16,7 +16,7 @@ const MedicalDetailsCard = (props) => {
                             {props.data.Unit}
                         </span>
                     </div>
-                    <div className='mx-4'>
+                    <div className='mx-2'>
                         {/* {props.data.icon} */}
                         <img src={props.data.icon}/>
                     </div>
