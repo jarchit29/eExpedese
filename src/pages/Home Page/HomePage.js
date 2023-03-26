@@ -11,6 +11,11 @@ import UserDashBoard from "../UserDashBoard/UserDashBoard";
 import { DashboardHeader } from "../../components/Miscellaneous/DashBoardHeader";
 import { useHistory } from "react-router-dom";
 
+// Import images 
+import imgBmi from "../../Style/Images/bmi.svg"
+import imgWeight from "../../Style/Images/bmi.svg"
+import imgHeight from "../../Style/Images/height.svg"
+
 const HomePage = () => {
 
   // Imports 
@@ -27,9 +32,9 @@ const HomePage = () => {
   // Harcoded Jsons
   const userHeaderData = [
 
-    {Value :"66" , Unit :"kg", icon:"Icon" , Attribute:"Weight" , Date:"10/03/2023"},
-    {Value :"66" , Unit :"kg", icon:"Icon" , Attribute:"Weight" , Date:"10/03/2023"},
-    {Value :"66" , Unit :"kg", icon:"Icon" , Attribute:"Weight" , Date:"10/03/2023"},
+    {Value :"66" , Unit :"kg", icon:imgWeight, Attribute:"Weight" , Date:"10/03/2023"},
+    {Value :"177" , Unit :"cm", icon:imgHeight , Attribute:"Height" , Date:"10/03/2023"},
+    {Value :"22.6" ,  icon:imgBmi , Attribute:"BMI" , Date:"10/03/2023"},
 
   ]
 

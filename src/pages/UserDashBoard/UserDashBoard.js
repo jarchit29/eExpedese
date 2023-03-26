@@ -17,16 +17,23 @@ import UpcomingReminders from "../../components/CardLayouts/UpcomingReminders";
 
 // Images
 import imgHomeClicked from "../../Style/Images/user.png";
+import pillsSvg from "../../Style/Images/pills.svg"
+import labssSvg from "../../Style/Images/labs.svg"
+import chronicSvg from "../../Style/Images/chronic.svg"
+import reminderSvg from "../../Style/Images/reminder.svg"
+import docConsultsSvg from "../../Style/Images/docConsults.svg"
+import healthRecordsSvg from "../../Style/Images/heatlhRecords.svg"
+
 
 const UserDashBoard = () => {
 
   const userCardsData = [
-    { title: "Medicines", img: imgHomeClicked, routeTo: "/Medicines" },
-    { title: "Lab Tests", img: imgHomeClicked, routeTo: "/LabTests" },
-    { title: "Doctor Consults", img: imgHomeClicked, routeTo: "/DoctorConsults" },
-    { title: "Pill Reminder", img: imgHomeClicked, routeTo: "/PillReminder" },
-    { title: "Heatlh Records", img: imgHomeClicked, routeTo: "/HealthRecords" },
-    { title: "Chronic Disease", img: imgHomeClicked, routeTo: "/ChronicDisease" },
+    { title: "Medicines", img: pillsSvg, routeTo: "/Medicines" },
+    { title: "Lab Tests", img: labssSvg, routeTo: "/LabTests" },
+    { title: "Doctor Consults", img: docConsultsSvg, routeTo: "/DoctorConsults" },
+    { title: "Pill Reminder", img: reminderSvg, routeTo: "/PillReminder" },
+    { title: "Heatlh Records", img: healthRecordsSvg, routeTo: "/HealthRecords" },
+    { title: "Chronic Disease", img: chronicSvg, routeTo: "/ChronicDisease" },
   ];
 
   const upcomingRemindersdata = [

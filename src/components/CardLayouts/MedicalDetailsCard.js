@@ -17,7 +17,8 @@ const MedicalDetailsCard = (props) => {
                         </span>
                     </div>
                     <div className='mx-4'>
-                        {props.data.icon}
+                        {/* {props.data.icon} */}
+                        <img src={props.data.icon}/>
                     </div>
 
                 </div>

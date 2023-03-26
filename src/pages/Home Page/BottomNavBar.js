@@ -1,6 +1,19 @@
 // Import Images 
-import imgHome from "../../Style/Images/icon-1.png";
-import imgHomeClicked from "../../Style/Images/icon-1clk.png";
+import imgHome from "../../Style/Images/icon-1clk.png";
+import imgHomeClicked from "../../Style/Images/HomeClicked.svg";
+
+import imgCalender from "../../Style/Images/calendar.svg";
+import imgCalenderClicked from "../../Style/Images/calendar.svg";
+
+import imgLeaves from "../../Style/Images/leave.svg"
+import imgLeavesClicked from "../../Style/Images/leave.svg"
+
+import imgNotifications from "../../Style/Images/Notification.svg"
+import imgNotificationsClicked from "../../Style/Images/Notification.svg"
+
+import imgMenu from "../../Style/Images/menu.svg"
+import imgMenuClicked from "../../Style/Images/menu.svg"
+
 
 
 export const BottomNavBar = (props) => {
@@ -8,10 +21,10 @@ export const BottomNavBar = (props) => {
   // This is hardcoded json for rendring bottom nav items
   const bottomNavItems = [
     { label: "Home", icon: imgHome  ,activeIcon:imgHomeClicked},
-    { label: "Health Calender", icon: imgHome ,activeIcon:imgHomeClicked },
-    { label: "My Leave", icon: imgHome  ,activeIcon:imgHomeClicked},
-    { label: "Notification", icon: imgHome ,activeIcon:imgHomeClicked },
-    { label: "More", icon: imgHome  ,activeIcon:imgHomeClicked},
+    { label: "Health Calender", icon: imgCalender ,activeIcon:imgCalenderClicked },
+    { label: "My Leave", icon: imgLeaves  ,activeIcon:imgLeavesClicked},
+    { label: "Notification", icon: imgNotifications ,activeIcon:imgNotificationsClicked },
+    { label: "More", icon: imgMenu  ,activeIcon:imgMenuClicked},
   ];
 
   return (

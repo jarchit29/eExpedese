@@ -19,7 +19,7 @@ let history = useHistory();
           {props.data.map((item) => {
             return (
               <IonCard className="col-3 mt-3 healthUtilCard"  onClick={()=>{history.push(`${item.routeTo}`)}}>
-                <img src={item.img} />
+                <img src={item.img}  className="mt-2"/>
                 <IonCardContent >
                   <IonText className="font_12" text-wrap>
                   {item.title}
