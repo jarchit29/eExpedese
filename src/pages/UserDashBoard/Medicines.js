@@ -15,7 +15,7 @@ const Medicines = (props) => {
   // Hardcoded jsons
   const editabledata = [
 
-    { label: "Medicine Name ", value: "Dolo", type: "text" },
+    { label: "Medicine Name ", value: "Dolo", type: "text"},
     { label: "Type  ", value: "Tablets", type: "text" },
     { label: "Quantitiy ", value: 1, type: "variable" },
 
@@ -26,13 +26,17 @@ const Medicines = (props) => {
 
   // Manage use states
 
-  const [totalCards, setTotalCards] = useState([{}])
+  const [totalCards, setTotalCards] = useState([])
 
   // Define on CLicks
   let onPresicriptionOrder = () => {
 
     history.push('./UploadPrescription')
 
+  }
+
+  let handleDelete = ()=>{
+   
   }
 
   return (
@@ -46,27 +50,34 @@ const Medicines = (props) => {
           <Seperator label="OR" />
 
           <div>
-          {totalCards.map((items) => {
-            return (
-              <IonCard>
-                
-                <IonCardContent>
-                  {editabledata.map((item) => {
-                    return (
-                      <FormComponent data={item} />
-                    )
 
-                  })}
-                </IonCardContent>
+            {totalCards.map((item,index) => {
+              return (
+                <ion-chip color='secondary'>
+                  <ion-label>To be done</ion-label>
+                  <ion-icon name="close" color='danger' onClick={handleDelete()}></ion-icon>
+                </ion-chip>
+              )
+            })}
 
-              </IonCard>
-            )
+            <IonCard>
 
-          })}
 
-          <p className='text-danger text-center mt-2' onClick={()=>{setTotalCards([...totalCards,{}])}}>
-            + Add More
-          </p>
+
+              <IonCardContent>
+                {editabledata.map((item) => {
+                  return (
+                    <FormComponent data={item} />
+                  )
+
+                })}
+              </IonCardContent>
+
+            </IonCard>
+
+            <p className='text-danger text-center mt-2' onClick={() => { setTotalCards([...totalCards, {}]) }}>
+              + Add More
+            </p>
 
           </div>
 
