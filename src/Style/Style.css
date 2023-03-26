@@ -2095,6 +2095,17 @@ ion-slides {
   margin-left: auto;
 }
 
+.text-span{
+  background:white;
+  border-radius:50%;
+  height: 26px;
+  width: 26px;
+  line-height: 26px;
+  display: inline-block;
+  text-align: center;
+  /* margin-right: 6px; */
+  border: 1px solid black;
+}
 
 .buttonBg {
 

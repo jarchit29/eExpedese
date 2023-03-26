@@ -40,14 +40,14 @@ const HomePage = () => {
 
   const editabledata = [
 
-    { label: "First Name ", value: "Archit" },
-    { label: "Last Name ", value: "Jain" },
-    { label: "Date of birth ", value: "29-01-2000" },
-    { label: "Gender ", value: "Male" },
-    { label: "Email ", value: "jarchit29@gmail.com" },
-    { label: "Phone ", value: "7018990346" },
-    { label: "Weight", value: "70 kg" },
-    { label: "Height ", value: "172 cm" },
+    { label: "First Name ", value: "Archit" ,type:"editable"},
+    { label: "Last Name ", value: "Jain",type:"editable" },
+    { label: "Date of birth ", value: "29-01-2000",type:"editable" },
+    { label: "Gender ", value: "Male",type:"editable" },
+    { label: "Email ", value: "jarchit29@gmail.com",type:"editable" },
+    { label: "Phone ", value: "7018990346",type:"editable" },
+    { label: "Weight", value: "70 kg",type:"editable"},
+    { label: "Height ", value: "172 cm" ,type:"editable"},
 
 
   ]

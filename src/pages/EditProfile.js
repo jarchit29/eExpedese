@@ -7,6 +7,7 @@ import ButtonBlock from '../components/Buttons/ButtonBlock';
 
 // Import from images 
 import userIcon from '../Style/Images/user.png'
+import FormComponent from '../components/Miscellaneous/FormComponent';
 
 
 const EditProfile = (props) => {
@@ -29,21 +30,7 @@ const EditProfile = (props) => {
        {props.location.state.map((item) => {
           return (
             <div>
-              <div className='flex-container'>
-
-                <div>
-                  <p>
-                    {item.label}
-                  </p>
-                </div>
-                <div className='lastItem'>
-                  <p contentEditable='true'>
-                    {item.value}
-                  </p>
-                </div>
-
-              </div>
-              <hr className='solid' />
+              <FormComponent data={item}/>
             </div>
           )
 
