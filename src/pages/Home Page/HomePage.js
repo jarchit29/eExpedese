@@ -6,7 +6,7 @@ import { setStatus } from "../../redux/AlertStatus";
 import AlertOnExit from "../../components/Alerts/AlertOnExit";
 import { Capacitor } from "@capacitor/core";
 import { createGesture, Gesture } from "@ionic/react";
-import { useDispatch  } from "react-redux";   
+import { useDispatch } from "react-redux";
 import UserDashBoard from "../UserDashBoard/UserDashBoard";
 import { DashboardHeader } from "../../components/Miscellaneous/DashBoardHeader";
 import { useHistory } from "react-router-dom";
@@ -32,18 +32,33 @@ const HomePage = () => {
   // Harcoded Jsons
   const userHeaderData = [
 
-    {Value :"66" , Unit :"kg", icon:imgWeight, Attribute:"Weight" , Date:"10/03/2023"},
-    {Value :"177" , Unit :"cm", icon:imgHeight , Attribute:"Height" , Date:"10/03/2023"},
-    {Value :"22.6" ,  icon:imgBmi , Attribute:"BMI" , Date:"10/03/2023"},
+    { Value: "66", Unit: "kg", icon: imgWeight, Attribute: "Weight", Date: "10/03/2023" },
+    { Value: "177", Unit: "cm", icon: imgHeight, Attribute: "Height", Date: "10/03/2023" },
+    { Value: "22.6", icon: imgBmi, Attribute: "BMI", Date: "10/03/2023" },
 
   ]
 
-let dispatch = useDispatch();
+  const editabledata = [
+
+    { label: "First Name ", value: "Archit" },
+    { label: "Last Name ", value: "Jain" },
+    { label: "Date of birth ", value: "29-01-2000" },
+    { label: "Gender ", value: "Male" },
+    { label: "Email ", value: "jarchit29@gmail.com" },
+    { label: "Phone ", value: "7018990346" },
+    { label: "Weight", value: "70 kg" },
+    { label: "Height ", value: "172 cm" },
+
+
+  ]
+
+  let dispatch = useDispatch();
   //TODO: add ionic-alert box to exit app
 
-  let onProfileIcon = ()=>{
-    
-    history.push("/EditProfile")
+  let onProfileIcon = () => {
+
+    // history.push("/EditProfile")
+    history.push({ pathname: "/EditProfile", state: editabledata });
   }
 
 
@@ -69,7 +84,7 @@ let dispatch = useDispatch();
       onMove: (ev) => {
         console.log(ev);
         ev.deltaX > 100 && setShowAlert(true)
-    
+
       },
     });
     gesture.enable();
@@ -79,20 +94,20 @@ let dispatch = useDispatch();
     <ion-content ref={swipeGesture}>
 
       <div>
-        <DashboardHeader DashboardHeaderTitle="Welcome Archit"  salutation="Good Morning " userInfo={true} data={userHeaderData} onClick={onProfileIcon} />
+        <DashboardHeader DashboardHeaderTitle="Welcome Archit" salutation="Good Morning " userInfo={true} data={userHeaderData} onClick={onProfileIcon} />
 
         {/* <SideMenuItems setPage={setPage} /> */}
 
-        {page==="Home" && <UserDashBoard/>}
+        {page === "Home" && <UserDashBoard />}
 
         <BottomNavBar setPage={setPage} page={page} />
-        
+
       </div>
 
       {showAlert && (
         <AlertOnExit showAlert={showAlert} setShowAlert={setShowAlert} />
       )}
-      
+
     </ion-content>
   );
 };

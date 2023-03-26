@@ -2095,6 +2095,7 @@ ion-slides {
   margin-left: auto;
 }
 
+
 .buttonBg {
 
   background-image: linear-gradient(#00FFFF, #083770);
@@ -2108,6 +2109,13 @@ ion-slides {
   margin-right: 10px;
   border-left: 1pt solid #707070;
   height: 100px;
+}
+
+hr.solid {
+  border-top: 0.5px solid #bbb;
+  margin-top: -15px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .headerNewHeight {
