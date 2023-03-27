@@ -9,6 +9,7 @@ import { BottomNavBar } from '../Home Page/BottomNavBar';
 import { IonCard, IonCardContent } from '@ionic/react';
 import FormComponent from '../../components/Miscellaneous/FormComponent';
 import { useState } from 'react';
+import UploadFrom from '../../components/Modals/UploadFrom';
 
 const Medicines = (props) => {
 
@@ -27,6 +28,7 @@ const Medicines = (props) => {
   // Manage use states
 
   const [totalCards, setTotalCards] = useState([])
+ 
 
   // Define on CLicks
   let onPresicriptionOrder = () => {

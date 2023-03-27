@@ -23,6 +23,7 @@ import chronicSvg from "../../Style/Images/chronic.svg"
 import reminderSvg from "../../Style/Images/reminder.svg"
 import docConsultsSvg from "../../Style/Images/docConsults.svg"
 import healthRecordsSvg from "../../Style/Images/heatlhRecords.svg"
+import UploadFrom from "../../components/Modals/UploadFrom";
 
 
 const UserDashBoard = () => {
