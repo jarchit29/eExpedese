@@ -14,6 +14,9 @@ const UploadPrescription = () => {
   const [openModal, setOpenModal] = useState(false)
   return (
     <div>
+
+      {openModal?<IonBackdrop visible={false} tappable={false} stopPropagation={false} />:<></>}
+
       <Header backArrow={true} HeaderTitle="Upload Prescription" onBackArrow={() => { history.goBack() }} />
 
 
