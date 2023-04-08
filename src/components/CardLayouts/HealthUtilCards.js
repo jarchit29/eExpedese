@@ -15,7 +15,7 @@ let history = useHistory();
   return (
     <div>
       <IonCard className="d-flex justify-content-center p-2">
-        <div className="row text-center">
+        <div className="row text-center justify-content-around">
           {props.data.map((item) => {
             return (
               <IonCard className="col-3 mt-3 healthUtilCard"  onClick={()=>{history.push(`${item.routeTo}`)}}>

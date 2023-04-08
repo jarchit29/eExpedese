@@ -8,10 +8,26 @@ import { useHistory } from "react-router";
 import { useState } from "react";
 import UploadFrom from "../components/Modals/UploadFrom";
 import { IonBackdrop } from "@ionic/react";
+import { Camera, CameraResultType , CameraSource} from '@capacitor/camera';
 
 const UploadPrescription = () => {
   let history = useHistory();
   const [openModal, setOpenModal] = useState(false)
+
+  const takePhoto = async () => {
+    const photo = await Camera.getPhoto({
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      quality: 100,
+    });
+  };
+
+  let onCamClick = ()=>{
+  
+    takePhoto();
+    console.log("path",takePhoto.webPath);
+
+  }
   return (
     <div>
 
@@ -55,7 +71,7 @@ const UploadPrescription = () => {
             }}
           />
         </div>
-        {openModal && <UploadFrom setOpenModal={setOpenModal} />}
+        {openModal && <UploadFrom setOpenModal={setOpenModal} onCamClick = {onCamClick} />}
       </div>
 
     </div>

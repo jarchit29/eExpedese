@@ -2097,9 +2097,9 @@ ion-slides {
   margin-left: auto;
 }
 
-.text-span{
-  background:white;
-  border-radius:50%;
+.text-span {
+  background: white;
+  border-radius: 50%;
   height: 26px;
   width: 26px;
   line-height: 26px;
@@ -2195,23 +2195,31 @@ hr.solid {
   background-color: gray;
 }
 
-.stickToBottom{
-  position:fixed;
-  bottom:15px;
-  width:100%;
+.stickToBottom {
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
 }
 
-.backdropBox {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--ion-background-color, #fff);
-  width: 90%;
-  height: 100px;
-  border-radius: 10px; 
-   */
+ion-fab-button {
+  --background: linear-gradient(#00FFFF, #083770);
+
+}
+
+.claenderContDate {
+
+  background-color: #083770;
+  color: white;
+  padding: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.claenderContTime {
+
+  background-color: #B2B2B2;
+  color: white;
+  padding: 5px;
+  font-size: 11px;
+  text-align: center;
 }

@@ -5,12 +5,8 @@ const UploadFrom = (props) => {
     return (
         <div className='backdropBox'>
 
-            {/* <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Launch demo modal
-            </button> */}
-
-
-            {/* <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> */}
+         
+           <div id="exampleModal"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             
                 <div class="modal-dialog " role="document" >
                     <div class="modal-content">
@@ -25,7 +21,7 @@ const UploadFrom = (props) => {
                         <div class="modal-body">
                             <div class="flex-container">
                              <IonCard>
-                                <IonCardContent>
+                                <IonCardContent onClick={props.onCamClick}>
                                   
                                     Camera
                                 </IonCardContent>
@@ -45,7 +41,7 @@ const UploadFrom = (props) => {
                         
                     </div>
                 </div>
-            {/* </div> */}
+            </div>
         </div>
     )
 }

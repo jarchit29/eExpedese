@@ -2,6 +2,7 @@ import { IonCard, IonCardContent, IonCardHeader } from '@ionic/react'
 import React from 'react'
 
 const SecondMedOpinion = (props) => {
+    
     return (
         <div>
             <IonCard className='mt-4'>
@@ -10,12 +11,12 @@ const SecondMedOpinion = (props) => {
                 </IonCardHeader>) : <></>}
                 
                 <IonCardContent>    
-                <div className='flex-container'>
+                <div className='flexNoMarginiContainer justify-content-around mt-2'>
                     <div>
                         <h5 style={{ color: "#161531" }}>{props.content}</h5>
                     </div>
                     <div>
-                        <button className='lastItem buttonBg btn-lg' onClick={props.onUploadPrescription}>
+                        <button className='buttonBg btn-lg' onClick={props.onUploadPrescription}>
                             {props.buttonLabel}
                         </button>
                     </div>
