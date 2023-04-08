@@ -8,6 +8,7 @@ import Segment from '../../components/Miscellaneous/Segment';
 
 // Import images
 import labssSvg from "../../Style/Images/labs.svg"
+import CardLabTests from '../../components/CardLayouts/CardLabTests';
 
 
 const LabTests = () => {
@@ -42,68 +43,12 @@ const LabTests = () => {
 
         <div className='mt-4'>
 
-          <IonCard>
-            <IonCardTitle className='mx-2 my-2'>
-              {segmentt == "Pending" ? `My Lab Appointments` : `My Lab Tests`}
-            </IonCardTitle>
-
-            {
-              data.map((item) => {
-
-                return (
-                  <IonCard className="mt-3 mb-3">
-                    <IonCardContent>
-                      <div className='flexNoMarginiContainer justify-content-around'>
-
-
-                        <div>
-                          <img src={item.icon} />
-                        </div>
-
-                        <div>
-                          <p>
-                            {item.heading}
-                          </p>
-                          <p>
-                            {item.subHeading}
-                          </p>
-                          <p className='text-danger'>
-                            {item.downloadLink}
-                          </p>
-                        </div>
-
-                        <div>
-                          <div className='claenderContDate'>
-                            <p>
-                              {item.calenderDate}
-                            </p>
-                            <p>
-                              {item.calenderMonth}
-                            </p>
-
-                          </div>
-
-                          <div className='claenderContTime'>
-                            <p>
-                              {item.time}
-                            </p>
-                          </div>
-                        </div>
-
-                      </div>
-                    </IonCardContent>
-                  </IonCard>
-                )
-
-              })
-            }
-
-          </IonCard>
+          <CardLabTests data={data} label={segmentt == "Pending" ? `My Lab Appointments` : `My Lab Tests`}/>
 
         </div>
 
         <IonFab slot="fixed" vertical="bottom" horizontal="end">
-          <IonFabButton>
+          <IonFabButton onClick={()=>{history.push('/AddATest')}}>
             <IonIcon icon={addOutline} ></IonIcon>
           </IonFabButton>
         </IonFab>

@@ -17,6 +17,7 @@ import ChronicDiseases from "../pages/UserDashBoard/ChronicDiseases";
 import EditProfile from "../pages/EditProfile";
 import UploadPrescription from "../pages/UploadPrescription";
 import GoToHome from "../pages/GoToHome";
+import AddALabTest from "../pages/LabTests/AddALabTest";
 
 
 function Routes() {
@@ -65,6 +66,7 @@ function Routes() {
           <Route exact path="/EditProfile" component={EditProfile}/>
           <Route exact path="/UploadPrescription" component={UploadPrescription}/>
           <Route exact path="/Success" component={GoToHome}/>
+          <Route exact path="/AddATest" component={AddALabTest}/>
           
         </>
       </IonRouterOutlet>
