@@ -2226,3 +2226,12 @@ ion-fab-button {
   font-size: 11px;
   text-align: center;
 }
+
+.myTabs{
+  background-color: #D1EFFF;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-radius: 13%;
+  padding: 8px;
+}
