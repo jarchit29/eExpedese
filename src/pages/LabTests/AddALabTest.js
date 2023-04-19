@@ -13,7 +13,7 @@ const AddALabTest = (props) => {
 
     // Harcoded journey traverse jsons
 
-    const category = [{ label: "Browse by health category " }, { label: "Browse by organs" }]
+    const category = [{ label: "Browse by health category ", routeTo: "/BrowseBy" }, { label: "Browse by organs", routeTo: "/BrowseBy" }]
     const addLabTest = [{ icon: labssSvg, heading: "Diabetes Screesning", subHeading: "Related to Pancreas", downloadLink: "Contains 2 Tests ", secondIcon: labssSvg }, { icon: labssSvg, heading: "Diabetes Screesning", subHeading: "Related to Pancreas", downloadLink: "Contains 2 Tests ", secondIcon: labssSvg }, { icon: labssSvg, heading: "Diabetes Screesning", subHeading: "Related to Pancreas", downloadLink: "Contains 2 Tests ", secondIcon: labssSvg }, { icon: labssSvg, heading: "Diabetes Screesning", subHeading: "Related to Pancreas", downloadLink: "Contains 2 Tests ", secondIcon: labssSvg }]
 
 
@@ -27,66 +27,68 @@ const AddALabTest = (props) => {
             <div>
                 <Header HeaderTitle="Add a lab test " backArrow={true} onBackArrow={() => { history.goBack() }} />
 
-                <Layout />
-
-                <div className='flexNoMarginiContainer justify-content-around'>
-                    {
-                        category.map((item) => {
-
-                            return (
-                                <IonCard>
-                                    <div className='p-2'>
-                                        <IonCardContent>
-                                            {item.label}
-                                        </IonCardContent>
-                                    </div>
-                                </IonCard>
-                            )
+                <Layout>
 
 
-                        })
-                    }
-                </div>
-                <div className='mt-4'>
 
-                    <CardLabTests data={addLabTest} label="Popular Tests" />
+                    <div className='flexNoMarginiContainer justify-content-around'>
+                        {
+                            category.map((item) => {
 
-                </div>
+                                return (
+                                    <IonCard onClick={() => { history.push({ pathname: item.routeTo, state: item.label }) }}>
+                                        <div className='p-2'>
+                                            <IonCardContent>
+                                                {item.label}
+                                            </IonCardContent>
+                                        </div>
+                                    </IonCard>
+                                )
 
-                <div className='mt-4'>
-                    <IonCard>
-                        <IonCardHeader>
-                            <IonCardTitle>
-                                Not Sure Which test to choose ?
-                            </IonCardTitle>
 
-                        </IonCardHeader>
-                        <IonCardContent>
+                            })
+                        }
+                    </div>
+                    <div className='mt-4'>
 
-                            <div className='flexNoMarginiContainer justify-content-around'>
+                        <CardLabTests data={addLabTest} label="Popular Tests" />
 
-                                <div>
+                    </div>
+
+                    <div className='mt-4'>
+                        <IonCard>
+                            <IonCardHeader>
+                                <IonCardTitle>
+                                    Not Sure Which test to choose ?
+                                </IonCardTitle>
+
+                            </IonCardHeader>
+                            <IonCardContent>
+
+                                <div className='flexNoMarginiContainer justify-content-around'>
+
                                     <div>
-                                    <IonText style={{ color: "#617C9D" }}>
-                                        Talk to qualified doctor to know the right test for your condition
-                                    </IonText>
+                                        <div>
+                                            <IonText style={{ color: "#617C9D" }}>
+                                                Talk to qualified doctor to know the right test for your condition
+                                            </IonText>
+                                        </div>
+                                        <button className='buttonBg btn-lg mt-2' style={{ fontSize: "20px" }}>
+                                            Consult Now
+                                        </button>
+
                                     </div>
-                                    <button className='buttonBg btn-lg mt-2' style={{fontSize:"20px"}}>
-                                        Consult Now
-                                    </button>
+
+                                    <img src={labssSvg} />
+                                </div>
+                                <div>
 
                                 </div>
+                            </IonCardContent>
+                        </IonCard>
 
-                                <img src={labssSvg} />
-                            </div>
-                            <div>
-
-                            </div>
-                        </IonCardContent>
-                    </IonCard>
-
-                </div>
-
+                    </div>
+                </Layout>
 
             </div>
         </ion-content>

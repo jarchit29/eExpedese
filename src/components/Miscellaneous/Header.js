@@ -7,7 +7,7 @@ import imgBackArrow from "../../Style/Images/arrow.png";
 
 export const Header = (props) => {
   return (
-    <div>
+    <div style={{position:'absolute'}}>
       {/* Below div is for design of headers */}
 
       {/* Below is code for banner  */}

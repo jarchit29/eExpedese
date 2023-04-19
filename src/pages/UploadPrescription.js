@@ -9,6 +9,7 @@ import { useState } from "react";
 import UploadFrom from "../components/Modals/UploadFrom";
 import { IonBackdrop } from "@ionic/react";
 import { Camera, CameraResultType , CameraSource} from '@capacitor/camera';
+import Layout from "../components/Miscellaneous/Layout";
 
 const UploadPrescription = () => {
   let history = useHistory();
@@ -36,7 +37,7 @@ const UploadPrescription = () => {
       <Header backArrow={true} HeaderTitle="Upload Prescription" onBackArrow={() => { history.goBack() }} />
 
 
-      <div className="mt-185 ">
+      <Layout>
         <h5 className="mx-3"> Have a Prescription ?</h5>
         <div className="text-center mt-4">
           <ButtonBlock label="Upload Prescription" onButtonClick={() => { setOpenModal(true) }} />
@@ -72,7 +73,7 @@ const UploadPrescription = () => {
           />
         </div>
         {openModal && <UploadFrom setOpenModal={setOpenModal} onCamClick = {onCamClick} />}
-      </div>
+      </Layout>
 
     </div>
   );

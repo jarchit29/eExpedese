@@ -18,6 +18,7 @@ import EditProfile from "../pages/EditProfile";
 import UploadPrescription from "../pages/UploadPrescription";
 import GoToHome from "../pages/GoToHome";
 import AddALabTest from "../pages/LabTests/AddALabTest";
+import BrowseBy from "../pages/BrowseBy";
 
 
 function Routes() {
@@ -67,6 +68,7 @@ function Routes() {
           <Route exact path="/UploadPrescription" component={UploadPrescription}/>
           <Route exact path="/Success" component={GoToHome}/>
           <Route exact path="/AddATest" component={AddALabTest}/>
+          <Route exact path="/BrowseBy" component={BrowseBy}/>
           
         </>
       </IonRouterOutlet>

@@ -10,13 +10,14 @@ import { IonCard, IonCardContent } from '@ionic/react';
 import FormComponent from '../../components/Miscellaneous/FormComponent';
 import { useState } from 'react';
 import UploadFrom from '../../components/Modals/UploadFrom';
+import Layout from '../../components/Miscellaneous/Layout';
 
 const Medicines = (props) => {
 
   // Hardcoded jsons
   const editabledata = [
 
-    { label: "Medicine Name ", value: "Dolo", type: "text"},
+    { label: "Medicine Name ", value: "Dolo", type: "text" },
     { label: "Type  ", value: "Tablets", type: "text" },
     { label: "Quantitiy ", value: 1, type: "variable" },
 
@@ -28,7 +29,7 @@ const Medicines = (props) => {
   // Manage use states
 
   const [totalCards, setTotalCards] = useState([])
- 
+
 
   // Define on CLicks
   let onPresicriptionOrder = () => {
@@ -37,8 +38,8 @@ const Medicines = (props) => {
 
   }
 
-  let handleDelete = ()=>{
-   
+  let handleDelete = () => {
+
   }
 
   return (
@@ -46,47 +47,49 @@ const Medicines = (props) => {
 
       <div>
         <Header HeaderTitle="Medicines" backArrow={true} onBackArrow={() => { history.goBack() }} />
-        <div className='mt-185'>
-          <SubHeading label="Order Medicine" />
-          <SecondMedOpinion buttonLabel="ORDER NOW" content={content} heading="Upload Prescription" color="black" onUploadPrescription={onPresicriptionOrder} />
-          <Seperator label="OR" />
-
+        <Layout>
           <div>
+            <SubHeading label="Order Medicine" />
+            <SecondMedOpinion buttonLabel="ORDER NOW" content={content} heading="Upload Prescription" color="black" onUploadPrescription={onPresicriptionOrder} />
+            <Seperator label="OR" />
 
-            {totalCards.map((item,index) => {
-              return (
-                <ion-chip color='secondary'>
-                  <ion-label>To be done</ion-label>
-                  <ion-icon name="close" color='danger' onClick={handleDelete()}></ion-icon>
-                </ion-chip>
-              )
-            })}
+            <div>
 
-            <IonCard>
+              {totalCards.map((item, index) => {
+                return (
+                  <ion-chip color='secondary'>
+                    <ion-label>To be done</ion-label>
+                    <ion-icon name="close" color='danger' onClick={handleDelete()}></ion-icon>
+                  </ion-chip>
+                )
+              })}
+
+              <IonCard>
 
 
 
-              <IonCardContent>
-                {editabledata.map((item) => {
-                  return (
-                    <FormComponent data={item} />
-                  )
+                <IonCardContent>
+                  {editabledata.map((item) => {
+                    return (
+                      <FormComponent data={item} />
+                    )
 
-                })}
-              </IonCardContent>
+                  })}
+                </IonCardContent>
 
-            </IonCard>
+              </IonCard>
 
-            <p className='text-danger text-center mt-2' onClick={() => { setTotalCards([...totalCards, {}]) }}>
-              + Add More
-            </p>
+              <p className='text-danger text-center mt-2' onClick={() => { setTotalCards([...totalCards, {}]) }}>
+                + Add More
+              </p>
 
+            </div>
+
+            <div className='text-center stickToBottom '>
+              <ButtonBlock label="ORDER" onButtonClick={() => { console.log("Task pending") }} />
+            </div>
           </div>
-
-          <div className='text-center stickToBottom '>
-            <ButtonBlock label="ORDER" onButtonClick={() => { console.log("Task pending") }} />
-          </div>
-        </div>
+        </Layout>
       </div>
     </ion-content>
   )

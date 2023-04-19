@@ -1,8 +1,12 @@
 import React from 'react'
+import { Header } from './Header'
 
-const Layout = () => {
+const Layout = (props) => {
   return (
-    <div className='mt-185'>
+
+    <div className='mt-130'>
+
+        {props.children}
         
     </div>
   )

@@ -352,6 +352,9 @@ body {
   z-index: 992;
   position: relative;
 }
+.mt-130 {
+  margin-top: 130px;
+}
 
 .p-60 {
   padding: 60px 16px 24px;
