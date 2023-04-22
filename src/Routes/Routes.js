@@ -20,6 +20,7 @@ import GoToHome from "../pages/GoToHome";
 import AddALabTest from "../pages/LabTests/AddALabTest";
 import BrowseBy from "../pages/BrowseBy";
 import FindYourDoctor from "../pages/FindYourDoctor";
+import DoctorInfo from "../pages/DoctorInfo";
 
 
 function Routes() {
@@ -71,6 +72,7 @@ function Routes() {
           <Route exact path="/AddATest" component={AddALabTest}/>
           <Route exact path="/BrowseBy" component={BrowseBy}/>
           <Route exact path="/FindYourDoctor" component={FindYourDoctor}/>
+          <Route exact path="/KnowYourDoctor" component={DoctorInfo}/>
           
         </>
       </IonRouterOutlet>
